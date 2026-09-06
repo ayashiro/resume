@@ -1,0 +1,150 @@
+%-------------------------
+% Resume in LaTeX (Japanese)
+% Author : Kenta Utsunomiya
+% Based on: https://www.overleaf.com/articles/vidushi-wahals-cv/wpcddrydqwsj
+% License : MIT
+%------------------------
+
+\documentclass[11pt]{article}
+
+\usepackage{luatexja-fontspec}
+\setmainjfont{Noto Sans CJK JP}
+
+\usepackage{geometry}
+\geometry{letterpaper, margin=0.75in}
+
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{\textbf{#1}{: #2}}\vspace{-2pt}}
+
+\newcommand{\resumeCert}[2]{
+  \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.5em, noitemsep, topsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{center}
+  \textbf{\huge Kenta Utsunomiya (宇都宮 健太)} \\ \vspace{3pt}
+  \small ダブリン、アイルランド \ $|$ \
+  \href{mailto:utsu.k.k@gmail.com}{\underline{utsu.k.k@gmail.com}} \ $|$ \
+  \href{https://ayashiro.github.io/}{\underline{ayashiro.github.io}} \ $|$ \
+  \href{https://www.linkedin.com/in/kenta-utsunomiya-301411153/}{\underline{linkedin.com/in/kenta-utsunomiya}} \ $|$ \
+  \href{https://github.com/ayashiro}{github.com/ayashiro}
+\end{center}
+\vspace{-8pt}
+
+%-----------EXPERIENCE-----------------
+\section{職務経歴}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Google Ireland}{ダブリン、アイルランド}
+      {ソフトウェアエンジニア (L4)}{2021年3月 -- 現在}
+      \resumeItemListStart
+        \resumeItem{財務データ移行プロジェクトのテックリードとして、Cloud Composer (Airflow) を用いたパイプラインを設計し、分散データセット月間1PBをBigQueryに集約。エンジニア3名・アナリスト4名・PM1名から成る8名の部門横断チームを統率した。}
+        \resumeItem{全社的な株式・ストックグラント管理向け社内Webアプリケーションの開発をリード。技術設計ドキュメントを作成し、事業側ステークホルダーとの合意形成を主導した。}
+        \resumeItem{四半期ごとの財務レポーティングETLパイプラインを100以上のデータソースにわたり自動化された月次ワークフローへ再構築し、処理時間を1週間から1日に短縮した。}
+        \resumeItem{Googleのエンジニア採用面接官として100名以上の候補者を評価。コーディング面接問題委員会のコアメンバーとして、競技プログラミング形式のアルゴリズム問題を設計(20\%プロジェクト)。}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Indeed Japan / Recruit Holdings}{東京、日本 \& オースティン、テキサス}
+      {ソフトウェアエンジニア (Lv1 $\rightarrow$ Lv2)}{2016年4月 -- 2021年3月}
+      \resumeItemListStart
+        \resumeItem{Java製のミッションクリティカルなP2Pファイル配信ミドルウェアを運用・スケーリングし、求人検索インデックス(Jobindex)を日次5TB以上、世界各地のデータセンター間で転送。圧縮処理と独自にフォークしたBitTorrentクライアントによりダウンロードデータ量を削減し、データセンター間の帯域使用量を80\%削減。人事評価で上位5\%を獲得した。}
+        \resumeItem{Jaeger・LightstepなどのDistributed Tracingソリューションをベンチマーク・評価し、Kubernetesクラスタ上にPrometheus/Grafanaと共に導入。全社的なマイクロサービスの可観測性(オブザーバビリティ)を向上させた。}
+        \resumeItem{テキサス州オースティンで開催されたIndeed University インキュベータープログラムに選抜。営業部門・法務部門と連携し、前科を持つ求職者を支援するサービス「Indeed Restart」の企画から開発・ローンチまでを3ヶ月で主導した。}
+        \resumeItem{複数の新卒エンジニアおよびインターンのメンタリングを担当し、厳格なコードレビュー体制とDockerベースのCIテストワークフローを整備した。}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{学歴}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {東京工業大学}{東京、日本}
+      {数理・計算科学専攻 修士課程 修了 \textnormal{(修士論文: 数理物理学)}}{2013年10月 -- 2016年9月}
+    \resumeSubheading
+      {東京工業大学}{東京、日本}
+      {情報科学科 学士課程 卒業 \textnormal{(研究テーマ: 複雑ネットワークとグラフマイニング)}}{2009年4月 -- 2013年9月}
+  \resumeSubHeadingListEnd
+
+%--------SKILLS & TECHNOLOGIES------------
+\section{スキル・技術}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{プログラミング言語}{: Java, C++, Python, Go, SQL, MATLAB}
+   }
+   \item{
+     \textbf{クラウド・インフラ}{: Google Cloud Platform (GCP), BigQuery, Cloud Composer (Airflow), Kubernetes, Docker, Terraform}
+   }
+   \item{
+     \textbf{分散システム・バックエンド}{: 分散システム, P2Pネットワーク, マイクロサービス, Prometheus, Grafana, Linux, Git}
+   }
+   \item{
+     \textbf{言語}{: 日本語(母語), 英語(ビジネスレベル / IELTS 7.5, TOEIC 900点), 中国語(HSK5級)}
+   }
+ \resumeSubHeadingListEnd
+
+%--------CERTIFICATIONS & HONORS------------
+\section{資格・受賞}
+  \resumeSubHeadingListStart
+    \resumeCert{統計検定 1級}{2019年11月}
+    \resumeCert{実用数学技能検定 1級}{2012年12月}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
