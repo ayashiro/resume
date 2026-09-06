@@ -1,0 +1,170 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Kenta Utsunomiya
+% Based on: https://www.overleaf.com/articles/vidushi-wahals-cv/wpcddrydqwsj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.6in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{\textbf{#1}{: #2}}\vspace{-2pt}}
+
+\newcommand{\resumeCert}[2]{
+  \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.5em, noitemsep, topsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{center}
+  \textbf{\huge Kenta Utsunomiya} \\ \vspace{3pt}
+  \small Dublin, Ireland \ $|$ \
+  \href{mailto:utsu.k.k@gmail.com}{\underline{utsu.k.k@gmail.com}} \ $|$ \
+  \href{https://ayashiro.github.io/}{\underline{ayashiro.github.io}} \ $|$ \
+  \href{https://www.linkedin.com/in/kenta-utsunomiya-301411153/}{\underline{linkedin.com/in/kenta-utsunomiya}} \ $|$ \
+  \href{https://github.com/ayashiro}{github.com/ayashiro}
+\end{center}
+\vspace{-8pt}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Google Ireland}{Dublin, Ireland}
+      {Software Engineer (L4)}{Mar. 2021 -- Present}
+      \resumeItemListStart
+        \resumeItem{Served as Tech Lead for the Financial Data Migration initiative, architecting Cloud Composer (Airflow) pipelines to centralize 1 PB/month of distributed datasets into BigQuery, leading an 8-person cross-functional team (3 SWEs, 4 Analysts, 1 PM).}
+        \resumeItem{Led the development of an internal web application for company-wide equity and stock grant management; authored technical design documentation and proactively drove alignment with business stakeholders.}
+        \resumeItem{Re-engineered quarterly financial reporting ETL pipelines into automated monthly workflows across 100+ sources, slashing turnaround time from 1 week to 1 day.}
+        \resumeItem{Active Google engineering interviewer (30+ candidates evaluated) and core member of Google's Coding Interview Question Committee, designing competitive programming algorithmic puzzles (20\% project).}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Indeed / Recruit Holdings}{Tokyo, Japan \& Austin, TX}
+      {Software Engineer (Lv1 $\rightarrow$ Lv2)}{Apr. 2016 -- Mar. 2021}
+      \resumeItemListStart
+        \resumeItem{Managed and scaled mission-critical P2P file distribution middleware in Java, transferring 5+ TB/day of Job Search index (Jobindex) across global datacenters; reduced data download volume via compression and custom-forked BitTorrent client, slashing inter-datacenter bandwidth by 80\% and earning a top 5\% performance rating.}
+        \resumeItem{Benchmarked and deployed distributed tracing solutions (Jaeger, Lightstep) on Kubernetes clusters with Prometheus and Grafana to enhance microservice observability across the company.}
+        \resumeItem{Selected for Indeed University incubator program in Austin, TX; led end-to-end product development and launch of ``Indeed Restart'' in 3 months, partnering with Sales and Legal to assist job seekers with conviction records.}
+        \resumeItem{Mentored multiple new-graduate software engineers and interns, establishing rigorous code review practices and Docker-based CI testing workflows.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Honda Research Institute}{Saitama, Japan}
+      {Software Engineering \& Research Intern}{Jul. 2014 -- Sep. 2014}
+      \resumeItemListStart
+        \resumeItem{Researched and developed acoustic voice recognition modules for the ASIMO humanoid robot using MATLAB and NumPy, analyzing multi-channel audio data.}
+        \resumeItem{Co-authored an academic workshop paper and registered a granted Japanese patent based on the voice recognition research accomplishments.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Tokyo Institute of Technology}{Tokyo, Japan}
+      {Master of Science in Mathematical and Computing Science}{Oct. 2013 -- Sep. 2016}
+      \resumeItemListStart
+        \resumeItem{Master's thesis centered on Mathematical Physics; specialized in mathematical modeling and computational theory.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Tokyo Institute of Technology}{Tokyo, Japan}
+      {Bachelor of Science in Information Science}{Apr. 2009 -- Sep. 2013}
+      \resumeItemListStart
+        \resumeItem{Undergraduate research focused on Complex Networks; coursework in Algorithms, Operating Systems, and Distributed Computing.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%--------SKILLS & TECHNOLOGIES------------
+\section{Skills \& Technologies}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: Java, C++, Python, Go, SQL, MATLAB}
+   }
+   \item{
+     \textbf{Cloud \& Infrastructure}{: BigQuery, Cloud Composer (Apache Airflow), Kubernetes, Docker, Terraform, GCP, Linux}
+   }
+   \item{
+     \textbf{Distributed Systems \& Backend}{: Distributed Systems, P2P Networks, Microservices, Prometheus, Grafana, MongoDB}
+   }
+   \item{
+     \textbf{Natural Languages}{: Japanese (Native), English (Business / IELTS 7.5), Mandarin Chinese (HSK Level 5)}
+   }
+ \resumeSubHeadingListEnd
+
+%--------CERTIFICATIONS & HONORS------------
+\section{Certifications \& Honors}
+  \resumeSubHeadingListStart
+    \resumeCert{Japanese Patent on ASIMO Voice Recognition System (Honda Research Institute)}{Sep. 2014}
+    \resumeCert{Japan Statistical Society Certificate, Grade 1 (First Grade)}{Nov. 2019}
+    \resumeCert{The Mathematics Certification of Japan, Grade 1 (1st Kyu)}{Dec. 2012}
+    \resumeCert{Language Certifications: IELTS Academic 7.5 (Sep. 2020) \ $|$ \ HSK Level 5 (Aug. 2020) \ $|$ \ TOEIC 900 (Jun. 2014)}{2014 -- 2020}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

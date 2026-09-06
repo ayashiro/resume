@@ -1,0 +1,13 @@
+# Compiled PDF (as requested)
+*.pdf
+
+# LaTeX auxiliary and log files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+*.dvi
